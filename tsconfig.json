@@ -14,6 +14,17 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "paths": {
+    "@/common/*": ["components/common/*"],
+    "@/layout/*": ["components/layout/*"],
+    "@/pageComponents/*": ["components/pageComponents/*"],
+    "@/services/*": ["config/services/*"],
+    "@pages/*": ["pages/*"],
+    "@config/*": ["config/*"],
+    "@logger": ["logger.config"],
+    "@tests/*": ["__tests__/*"],
+    "@mocks/*": ["__mocks__/*"],
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js"],
   "exclude": ["node_modules"]
 }
