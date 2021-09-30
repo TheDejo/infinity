@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
-import Notification from '../components/notification';
 
 const JobCard: React.FC = () => {
     const [visible, setVisible] = useState(false);
