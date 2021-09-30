@@ -52,8 +52,8 @@ const HomeSection: React.FC = () => {
                     ))}
                 </div>
                 <div className="border border-gray-200 my-4" />
-                <JobCard />
             </section>
+            <JobCard />
         </div>
     );
 };

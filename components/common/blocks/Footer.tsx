@@ -151,8 +151,6 @@ const Footer: React.FC = () => {
         <section className="flex w-screen justify-center items-center px-8 min-h-[30vh] bg-infinity-hero">
             <div className="flex flex-col md:flex-row justify-around w-full items-start py-9">
                 <div className="mb-4">
-                    <Image src={'/assets/images/logo.png'} width={63} height={35} alt="infinity logo" />
-
                     <h2 className="text-xl font-semibold">{SCREEN_TEXTS.infinityTitle}</h2>
                 </div>
                 <div className="flex flex-col justify-center items-center w-72 mb-4">

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Button from '../components/Button';
+import Notification from '@/common/components/Notification';
 
 const JobCard: React.FC = () => {
     const [visible, setVisible] = useState(false);
 
-    const handleNotification = () => setVisible(true);
+    const handleModalClose = () => setVisible(false);
 
     const JOB_DETAILS = [
         {
@@ -32,7 +32,7 @@ const JobCard: React.FC = () => {
     const BUTTON = [
         {
             title: 'Apply Now',
-            onClick: () => {},
+            onClick: () => setVisible(true),
             style: 'px-6 py-2 mb-3 md:mb-0 text-white bg-[#444444] mr-2 rounded-3xl',
         },
         {
@@ -66,6 +66,7 @@ const JobCard: React.FC = () => {
                     ))}
                 </div>
             </div>
+            {visible && <Notification handleClose={handleModalClose} />}
         </>
     );
 };
