@@ -8,6 +8,7 @@ const Slug = () => {
         <section className="p-8">
             <Layout>
                 <JobCard />
+                <Notification />
             </Layout>
         </section>
     );

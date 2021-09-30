@@ -1,6 +1,6 @@
 import React from 'react';
-import JobCard from '../../common/blocks/JobCard';
-import Select from '../../common/components/Select';
+import JobCard from '@/common/blocks/JobCard';
+import Select from '@/common/components/Select';
 import Hero from './Hero';
 
 const HomeSection: React.FC = () => {
