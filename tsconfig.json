@@ -19,6 +19,7 @@
       "@/layout/*": ["components/layout/*"],
       "@/pageComponents/*": ["components/pageComponents/*"],
       "@/services/*": ["config/services/*"],
+      "@data": ["data"],
       "@pages/*": ["pages/*"],
       "@config/*": ["config/*"],
       "@logger": ["logger.config"],
