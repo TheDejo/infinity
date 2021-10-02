@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import constants from './constants';
+import { useJobContext } from './context/InfinityContext';
 
 const { SCREEN_TEXTS } = constants;
 const Hero: React.FC = () => {
+    const [searchInput, setSearchInput] = useState('');
+    const { setFilter } = useJobContext();
+
     return (
         <section className="lg:px-8">
             <div className="p-8 bg-infinity-hero lg:rounded-[30px] flex justify-center items-center min-h-[30vh]">
@@ -20,8 +24,16 @@ const Hero: React.FC = () => {
                             placeholder={SCREEN_TEXTS.searchPlaceHolder}
                             name="search"
                             className="rounded-lg  w-full md:w-72 xl:w-96 pl-6 py-2  placeholder-gray-600"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
                         />
-                        <button className="hidden md:flex justify-center items-center text-white text-lg rounded-lg bg-[#F3A494] px-5  shadow-infinity ml-2">
+                        <button
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setFilter(searchInput);
+                            }}
+                            className="hidden md:flex justify-center items-center text-white text-lg rounded-lg bg-[#F3A494] px-5  shadow-infinity ml-2"
+                        >
                             Find Jobs
                         </button>
                     </form>
