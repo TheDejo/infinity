@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Select from '../components/Select';
+import Link from 'next/link';
 
 const NavContent: React.FC = () => {
     const [visible, setVisible] = useState(false);
@@ -16,6 +16,8 @@ const NavContent: React.FC = () => {
             onClick: () => {},
         },
     ];
+
+    console.log(visible);
 
     return (
         <>
@@ -34,16 +36,15 @@ const NavContent: React.FC = () => {
                 )}
             </button>
             <div
-                className={`flex md:flex-row flex-col md:relative fixed md:h-auto h-full md:w-auto w-full justify-center items-center md:bg-white bg-[#FCF0EC] md:top-auto top-20 md:right-auto right-0 md:transition-none transition ease-in-out ${
+                className={`${
                     visible ? 'translate-x-0' : 'translate-x-full'
-                }`}
+                } flex md:flex-row flex-col md:relative fixed md:h-auto h-full md:w-auto w-full justify-center items-center md:bg-white bg-infinity-hero md:top-auto top-20 md:right-auto right-0 md:transition-none md:translate-x-0  transition ease-in-out `}
             >
-                {NAV_ITEMS.map(({ title, onClick }, idx) => (
-                    <button onClick={onClick} key={idx.toString()} className="md:mr-5 my-6 md:my-0">
-                        {title}
-                    </button>
+                {NAV_ITEMS.map(({ title }, idx) => (
+                    <Link href="#contact" key={idx.toString()} passHref>
+                        <a className="md:mr-5 my-6 md:my-0">{title}</a>
+                    </Link>
                 ))}
-                <Select title="English" data={[]} />
             </div>
         </>
     );

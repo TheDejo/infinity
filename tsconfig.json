@@ -22,7 +22,6 @@
       "@data": ["data"],
       "@pages/*": ["pages/*"],
       "@config/*": ["config/*"],
-      "@logger": ["logger.config"],
       "@tests/*": ["__tests__/*"],
       "@mocks/*": ["__mocks__/*"],
     },

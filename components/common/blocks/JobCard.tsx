@@ -1,18 +1,22 @@
 import React, { ComponentFactory, useState } from 'react';
-import Notification from '@/common/components/Notification';
+import Modal from '@/common/components/Modal';
 import Button from '@/common/components/Button';
+import { useRouter } from 'next/router';
 
 interface IProps {
     title: string;
     company: string;
-    jobType: string[];
+    type: string[];
     location: string;
     description: string;
     skills: string[];
+    id: string;
 }
 
-const JobCard: React.FC<IProps> = ({ title, company, jobType, location, description, skills }: IProps) => {
+const JobCard: React.FC<IProps> = (job: IProps) => {
+    const { id, title, company, type, location, description, skills } = job;
     const [visible, setVisible] = useState(false);
+    const router = useRouter();
 
     const handleModalClose = () => setVisible(false);
 
@@ -26,27 +30,16 @@ const JobCard: React.FC<IProps> = ({ title, company, jobType, location, descript
             value: description,
         },
         {
-            title: 'Jobtype',
-            value: jobType.join(', '),
+            title: 'Job Type',
+            value: type,
         },
         {
             title: 'Skills',
-            value: skills.join(', '),
+            value: skills,
         },
         {
             title: 'Location',
             value: location,
-        },
-    ];
-
-    const BUTTONS = [
-        {
-            title: 'Apply Now',
-            onClick: () => setVisible(true),
-        },
-        {
-            title: 'View Job',
-            onClick: () => {},
         },
     ];
 
@@ -60,7 +53,7 @@ const JobCard: React.FC<IProps> = ({ title, company, jobType, location, descript
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {JOB_DETAILS.map(({ title, value }, idx) => (
                         <div className="flex md:flex-row flex-col" key={idx.toString()}>
-                            <p className="md:mr-3 mb-3 md:mb-0 w-32">{title}:</p>
+                            <p className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold">{title}:</p>
                             <p>{value}</p>
                         </div>
                     ))}
@@ -68,10 +61,15 @@ const JobCard: React.FC<IProps> = ({ title, company, jobType, location, descript
                 <div className="border border-gray-200 my-4" />
                 <div className="w-full flex md:flex-row flex-col justify-end">
                     <Button onClick={() => setVisible(true)} title="Apply Now" />
-                    <Button onClick={() => {}} title="View Job" color="text-black" background="bg-[#FCF0EC]" />
+                    <Button
+                        onClick={() => router.push(id)}
+                        title="View Job"
+                        color="text-black"
+                        background="bg-[#FCF0EC]"
+                    />
                 </div>
             </div>
-            {visible && <Notification handleClose={handleModalClose} />}
+            {visible && <Modal handleClose={handleModalClose} />}
         </>
     );
 };
