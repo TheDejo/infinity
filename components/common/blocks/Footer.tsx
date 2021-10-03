@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import constants from './constants';
+import config from '@config/constants';
 
-const { SCREEN_TEXTS } = constants;
+const { COMPANY_DETAILS, SOCIAL_ADDRESS, SCREEN_TEXTS } = config;
 
 const Footer: React.FC = () => {
     const SOCIAL_ICONS = [
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                     </defs>
                 </svg>
             ),
-            link: '/',
+            link: SOCIAL_ADDRESS.twitter,
         },
         {
             name: 'instagram',
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                     </defs>
                 </svg>
             ),
-            link: '/',
+            link: SOCIAL_ADDRESS.instagram,
         },
         {
             name: 'facebook',
@@ -144,25 +144,25 @@ const Footer: React.FC = () => {
                     </defs>
                 </svg>
             ),
-            link: '/',
+            link: SOCIAL_ADDRESS.facebook,
         },
     ];
     return (
-        <section className="flex w-screen justify-center items-center px-8 min-h-[30vh] bg-infinity-hero">
+        <section id="contact" className="flex w-screen justify-center items-center px-8 min-h-[30vh] bg-infinity-hero">
             <div className="flex flex-col md:flex-row justify-around w-full items-start py-9">
                 <div className="mb-4">
                     <h2 className="text-xl font-semibold">{SCREEN_TEXTS.infinityTitle}</h2>
                 </div>
                 <div className="flex flex-col justify-center items-center w-72 mb-4">
-                    <h2 className="text-xl font-semibold w-full md:text-center pb-3">{SCREEN_TEXTS.aboutTiile}</h2>
-                    <p>{SCREEN_TEXTS.aboutText}</p>
+                    <h2 className="text-xl font-semibold w-full md:text-center pb-3">{SCREEN_TEXTS.aboutTitle}</h2>
+                    <p>{COMPANY_DETAILS.about}</p>
                 </div>
                 <div className="flex flex-col justify-center items-center w-72 mb-4">
                     <h2 className="text-xl font-semibold text-left w-full md:text-center pb-3">
                         {SCREEN_TEXTS.contactTitle}
                     </h2>
-                    <p>{SCREEN_TEXTS.contactAddress} </p>
-                    <p className="text-left w-full mt-2 text-xl">{SCREEN_TEXTS.phoneNumber}</p>
+                    <p>{COMPANY_DETAILS.address} </p>
+                    <p className="text-left w-full mt-2 text-xl">{COMPANY_DETAILS.phone}</p>
                     <div className="flex justify-start w-full mt-2">
                         {SOCIAL_ICONS.map(({ icon, link, name }) => (
                             <Link href={link} passHref key={name}>

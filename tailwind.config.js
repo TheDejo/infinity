@@ -23,17 +23,12 @@ module.exports = {
           },
           colors: {
               'infinity-hero': '#FCF0EC',
-          },
-          dropShadow: {
-              'nfs-maps': '0px 3px 5px rgba(9, 30, 66, 0.2)) drop-shadow(0px 0px 1px rgba(9, 30, 66, 0.31)',
+              'modal': 'rgba(0, 0, 0, 0.42)',
+              'darkBlue': '#182655',
           },
           fontFamily: {
             primary: ['Poppins', 'sans-serif'],
         },
-          screens: {
-              '2xl': '1536px',
-              '3xl': '1600px',
-          },
       },
   },
   variants: {

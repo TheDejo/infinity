@@ -1,43 +1,66 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
-import Notification from '@/common/components/Notification';
+import Modal from '@/common/components/Modal';
 import { useRouter } from 'next/router';
 import Button from '@/common/components/Button';
+import data from '@data';
+
+type Job = {
+    title: string;
+    company: string;
+    type: string[];
+    location: string;
+    description: string;
+    skills: string[];
+    id: string;
+};
 
 const Slug = () => {
     const [visible, setVisible] = useState(false);
-
+    const [singleJob, setSingleJob] = useState<Job | undefined>(undefined);
     const handleModalClose = () => setVisible(false);
     const router = useRouter();
+    const { id } = router.query;
+
+    useEffect(() => {
+        const job = data.JOBS_DATA.find((job) => job.id === id);
+        setSingleJob(job);
+    }, [id]);
 
     const JOB_DETAILS = [
         {
+            title: 'Title',
+            value: singleJob?.title,
+        },
+        {
             title: 'Company',
-            value: 'company',
+            value: singleJob?.company,
         },
         {
             title: 'Description',
-            value: 'description',
+            value: singleJob?.description,
         },
         {
-            title: 'Jobtype',
-            value: [],
+            title: 'Job Type',
+            value: singleJob?.type,
         },
         {
             title: 'Skills',
-            value: [],
+            value: singleJob?.skills,
         },
         {
             title: 'Location',
-            value: 'location',
+            value: singleJob?.location,
         },
     ];
+
+    console.log();
 
     return (
         <Layout>
             <div className="p-8 w-full min-h-[70vh] border border-black rounded-3xl flex flex-col mb-8">
                 <div className="flex text-left w-full">
-                    <h2 className="font-medium text-2xl">Front End developer</h2>
+                    <h2 className="font-medium text-2xl">{JOB_DETAILS[0].value}</h2>
                 </div>
                 <div className="border border-gray-200 my-4" />
                 <div className="grid grid-cols-1 gap-5">
@@ -74,7 +97,7 @@ const Slug = () => {
                     />
                 </div>
             </div>
-            {visible && <Notification handleClose={handleModalClose} />}
+            {visible && <Modal handleClose={handleModalClose} />}
         </Layout>
     );
 };
