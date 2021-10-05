@@ -17,8 +17,6 @@ const NavContent: React.FC = () => {
         },
     ];
 
-    console.log(visible);
-
     return (
         <>
             <button onClick={toggle} className="hover:scale-110 md:hidden">
@@ -42,7 +40,12 @@ const NavContent: React.FC = () => {
             >
                 {NAV_ITEMS.map(({ title }, idx) => (
                     <Link href="#contact" key={idx.toString()} passHref>
-                        <a className="md:mr-5 my-6 md:my-0">{title}</a>
+                        <a
+                            onClick={toggle}
+                            className="md:mr-5 my-6 md:my-0 hover:border-b-4 hover:border-[#F3A494] text-xl hover:transition hover:ease-in-out"
+                        >
+                            {title}
+                        </a>
                     </Link>
                 ))}
             </div>

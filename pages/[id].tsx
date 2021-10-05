@@ -29,10 +29,6 @@ const Slug = () => {
 
     const JOB_DETAILS = [
         {
-            title: 'Title',
-            value: singleJob?.title,
-        },
-        {
             title: 'Company',
             value: singleJob?.company,
         },
@@ -54,25 +50,21 @@ const Slug = () => {
         },
     ];
 
-    console.log();
-
     return (
         <Layout>
-            <div className="p-8 w-full min-h-[70vh] border border-black rounded-3xl flex flex-col mb-8">
+            <div className="p-8 w-full min-h-[70vh] flex flex-col justify-center mb-8">
                 <div className="flex text-left w-full">
-                    <h2 className="font-medium text-2xl">{JOB_DETAILS[0].value}</h2>
+                    <h2 className="font-medium text-2xl">{singleJob?.title}</h2>
                 </div>
-                <div className="border border-gray-200 my-4" />
-                <div className="grid grid-cols-1 gap-5">
+                <div className="grid grid-cols-1 gap-5 my-12">
                     {JOB_DETAILS.map(({ title, value }, idx) => (
                         <div className="flex md:flex-row flex-col" key={idx.toString()}>
-                            <p className="md:mr-3 mb-3 md:mb-0 w-32">{title}:</p>
+                            <p className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold">{title}:</p>
                             <p>{value}</p>
                         </div>
                     ))}
                 </div>
-                <div className="border border-gray-200 my-4" />
-                <div className="w-full flex md:flex-row flex-col justify-end">
+                <div className="w-full flex md:flex-row flex-col justify-start">
                     <Button onClick={() => setVisible(true)} title="Apply Now" />
                     <Button
                         onClick={() => router.back()}

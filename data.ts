@@ -25,6 +25,24 @@ const JOBS_DATA = [
         "skills": ['React', 'TypeScript'],
         "type": ['Contract'],
         "location": "7, Ikorodu close"
+    },
+    {
+        "id": "4",
+        "title": "Software Developer",
+        "company":"Google",
+        "description": 'nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi',
+        "skills": ['React', 'TypeScript'],
+        "type": ['Contract', 'Remote'],
+        "location": "Lagos"
+    },
+    {
+        "id": "5",
+        "title": "Software Developer",
+        "company":"Space X",
+        "description": 'nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi',
+        "skills": ['Node', 'TypeScript'],
+        "type": ['Contract'],
+        "location": "Lagos"
     }
 ]
 
