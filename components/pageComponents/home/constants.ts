@@ -14,7 +14,6 @@ const SCREEN_TEXTS = {
     infinityTitle: 'Infinity & Beyond',
 };
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     SCREEN_TEXTS,
     PAGE_HEAD,

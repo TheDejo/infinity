@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import JobCard from '@/common/blocks/JobCard';
 import Select from '@/common/components/Select';
 import Hero from './Hero';
 import { useJobContext } from './context/InfinityContext';
 import Button from '@/common/components/Button';
+import Pagination from '@/common/components/Pagination';
 
 const HomeSection: React.FC = () => {
     const { data, filter } = useJobContext();
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(3);
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
+    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
     const matchWords = (subject: string, words: string[]) => {
         var regexMetachars = /[(){[*+?.\\^$|]/g;
@@ -19,7 +28,7 @@ const HomeSection: React.FC = () => {
 
     const renderJobs = () => {
         if (!filter) {
-            return data.map((job) => <JobCard key={job.id} {...job} />);
+            return currentPosts.map((job) => <JobCard key={job.id} {...job} />);
         }
         const filterArray = data.filter(
             ({ company, location, skills, title, type }) =>
@@ -53,49 +62,75 @@ const HomeSection: React.FC = () => {
         }
         return filterArray.map((job) => <JobCard key={job.id} {...job} />);
     };
+    const unique = (value: string, index: number, self: string[]) => {
+        const getIndex = (element: string) => element === value;
+        return self.findIndex(getIndex) === index;
+    };
 
-    const BUTTONS = [
+    // (value: string, index: number, obj: string[]) => unknown
+
+    const SELECT_FILTER = [
         {
             title: 'Company',
             key: 'company' as const,
-            options: data.map(({ company }) => ({ value: company, name: company })),
+            options: data
+                .map(({ company }) => company)
+                .filter(unique)
+                .map((_company) => ({ value: _company, name: _company })),
         },
         {
             title: 'Title',
             key: 'title' as const,
-            options: data.map(({ title }) => ({ value: title, name: title })),
+            options: data
+                .map(({ title }) => title)
+                .filter(unique)
+                .map((_title) => ({ value: _title, name: _title })),
         },
         {
             title: 'Skills',
             key: 'company' as const,
-            options: data.map(({ skills }) => skills.map((_skills) => ({ value: _skills, name: _skills }))).flat(1),
+            options: data
+                .map(({ skills }) => skills)
+                .flat(1)
+                .filter(unique)
+                .map((_skills) => ({ value: _skills, name: _skills })),
         },
         {
             title: 'Job Type',
             key: 'jobType' as const,
-            options: data.map(({ type }) => type.map((_type) => ({ value: _type, name: _type }))).flat(1),
+            options: data
+                .map(({ type }) => type)
+                .flat(1)
+                .filter(unique)
+                .map((_type) => ({ value: _type, name: _type })),
         },
         {
             title: 'Location',
             key: 'location' as const,
-            options: data.map(({ location }) => ({ value: location, name: location })),
+            options: data
+                .map(({ location }) => location)
+                .filter(unique)
+                .map((_location) => ({ value: _location, name: _location })),
         },
     ];
 
     return (
-        <div>
+        <>
             <Hero />
-            <section className="p-8">
-                <h1 className="font-medium">Filter</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 py-6">
-                    {BUTTONS.map(({ title, key, options }) => (
-                        <Select key={key} title={title} data={options} />
-                    ))}
+            <section className="py-8">
+                <div className="px-8">
+                    <h1 className="font-medium">Filter</h1>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 py-6">
+                        {SELECT_FILTER.map(({ title, key, options }) => (
+                            <Select key={key} title={title} data={options} />
+                        ))}
+                    </div>
                 </div>
                 <div className="border border-gray-200 my-4" />
+                {renderJobs()}
+                {!filter && <Pagination postsPerPage={postsPerPage} totalPosts={data.length} paginate={paginate} />}
             </section>
-            {renderJobs()}
-        </div>
+        </>
     );
 };
 
