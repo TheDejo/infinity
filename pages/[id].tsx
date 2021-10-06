@@ -15,7 +15,7 @@ type Job = {
     id: string;
 };
 
-const Slug = () => {
+const Slug: React.FC = () => {
     const [visible, setVisible] = useState(false);
     const [singleJob, setSingleJob] = useState<Job | undefined>(undefined);
     const handleModalClose = () => setVisible(false);

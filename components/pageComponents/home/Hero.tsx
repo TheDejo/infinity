@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
     const { setFilter } = useJobContext();
 
     return (
-        <section className="lg:px-8">
+        <section className="lg:px-8" test-dataId="hero-section">
             <div className="p-8 bg-infinity-hero lg:rounded-[30px] flex justify-center items-center min-h-[30vh]">
                 <div className="mr-6">
                     <h1 className="xl:w-[30rem] font-semibold text-2xl md:text-3xl lg:text-6xl mb-3">
@@ -20,6 +20,7 @@ const Hero: React.FC = () => {
                     </p>
                     <form className="flex flex-col md:flex-row mt-6 justify-start w-full">
                         <input
+                            data-testid="hero-input"
                             type="text"
                             placeholder={SCREEN_TEXTS.searchPlaceHolder}
                             name="search"

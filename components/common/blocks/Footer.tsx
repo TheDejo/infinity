@@ -166,7 +166,9 @@ const Footer: React.FC = () => {
                     <div className="flex justify-start w-full mt-2">
                         {SOCIAL_ICONS.map(({ icon, link, name }) => (
                             <Link href={link} passHref key={name}>
-                                {icon}
+                                <a target="_blank" rel="noopener noreferrer">
+                                    {icon}
+                                </a>
                             </Link>
                         ))}
                     </div>

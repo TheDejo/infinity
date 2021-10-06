@@ -72,7 +72,6 @@ const HomeSection: React.FC = () => {
     const SELECT_FILTER = [
         {
             title: 'Company',
-            key: 'company' as const,
             options: data
                 .map(({ company }) => company)
                 .filter(unique)
@@ -80,7 +79,6 @@ const HomeSection: React.FC = () => {
         },
         {
             title: 'Title',
-            key: 'title' as const,
             options: data
                 .map(({ title }) => title)
                 .filter(unique)
@@ -88,7 +86,6 @@ const HomeSection: React.FC = () => {
         },
         {
             title: 'Skills',
-            key: 'company' as const,
             options: data
                 .map(({ skills }) => skills)
                 .flat(1)
@@ -97,7 +94,6 @@ const HomeSection: React.FC = () => {
         },
         {
             title: 'Job Type',
-            key: 'jobType' as const,
             options: data
                 .map(({ type }) => type)
                 .flat(1)
@@ -106,7 +102,6 @@ const HomeSection: React.FC = () => {
         },
         {
             title: 'Location',
-            key: 'location' as const,
             options: data
                 .map(({ location }) => location)
                 .filter(unique)
@@ -115,22 +110,22 @@ const HomeSection: React.FC = () => {
     ];
 
     return (
-        <>
+        <section data-testid="home-section">
             <Hero />
-            <section className="py-8">
+            <div className="py-8">
                 <div className="px-8">
                     <h1 className="font-medium">Filter</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 py-6">
-                        {SELECT_FILTER.map(({ title, key, options }) => (
-                            <Select key={key} title={title} data={options} />
+                        {SELECT_FILTER.map(({ title, options }, idx) => (
+                            <Select key={idx.toString()} title={title} data={options} />
                         ))}
                     </div>
                 </div>
                 <div className="border border-gray-200 my-4" />
                 {renderJobs()}
                 {!filter && <Pagination postsPerPage={postsPerPage} totalPosts={data.length} paginate={paginate} />}
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

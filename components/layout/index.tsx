@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../common/blocks/Footer';
-import Header from '../common/blocks/Header';
+import Footer from '@/common/blocks/Footer';
+import Header from '@/common/blocks/Header';
 
 interface IProps {
     children: React.ReactNode;
