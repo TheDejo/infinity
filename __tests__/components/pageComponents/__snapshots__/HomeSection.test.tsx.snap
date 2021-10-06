@@ -1,0 +1,707 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Section  Component matches Single input snapshot 1`] = `
+<section
+  data-testid="home-section"
+>
+  <section
+    className="lg:px-8"
+    test-dataId="hero-section"
+  >
+    <div
+      className="p-8 bg-infinity-hero lg:rounded-[30px] flex justify-center items-center min-h-[30vh]"
+    >
+      <div
+        className="mr-6"
+      >
+        <h1
+          className="xl:w-[30rem] font-semibold text-2xl md:text-3xl lg:text-6xl mb-3"
+        >
+          Welcome To Infinity, & Beyond
+        </h1>
+        <p
+          className="md:w-[30rem] font-normal text-sm md:text-base lg:text-xl"
+        >
+          Connect Today With Innovative Companies That Care About Planetary Diversity & Inclusion
+        </p>
+        <form
+          className="flex flex-col md:flex-row mt-6 justify-start w-full"
+        >
+          <input
+            className="rounded-lg  w-full md:w-72 xl:w-96 pl-6 py-2  placeholder-gray-600"
+            data-testid="hero-input"
+            name="search"
+            onChange={[Function]}
+            placeholder="Job Title or keywords"
+            type="text"
+            value=""
+          />
+          <button
+            className="hidden md:flex justify-center items-center text-white text-lg rounded-lg bg-[#F3A494] px-5  shadow-infinity ml-2"
+            onClick={[Function]}
+          >
+            Find Jobs
+          </button>
+        </form>
+      </div>
+      <figure
+        className="hidden md:flex"
+      >
+        <div
+          style={
+            Object {
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "overflow": "hidden",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "display": "block",
+                "maxWidth": "100%",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDc4IiBoZWlnaHQ9IjQzOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+              style={
+                Object {
+                  "border": "none",
+                  "display": "block",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "padding": 0,
+                }
+              }
+            />
+          </div>
+          <img
+            alt="hero image"
+            data-nimg="intrinsic"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="hero image"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fhero.png&w=1080&q=75"
+              srcSet="/_next/image?url=%2Fassets%2Fimages%2Fhero.png&w=640&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fhero.png&w=1080&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </div>
+      </figure>
+    </div>
+  </section>
+  <div
+    className="py-8"
+  >
+    <div
+      className="px-8"
+    >
+      <h1
+        className="font-medium"
+      >
+        Filter
+      </h1>
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 py-6"
+      >
+        <div
+          className="bg-black text-sm py-3 px-4 flex justify-center items-center rounded-lg shadow-infinity outline-none border-none"
+        >
+          <select
+            className="bg-black text-white w-full after:border-none"
+            onChange={[Function]}
+          >
+            <option
+              disabled={true}
+              selected={true}
+              value=""
+            >
+              Company
+            </option>
+            <option
+              value="Microsoft"
+            >
+              Microsoft
+            </option>
+            <option
+              value="Facebook"
+            >
+              Facebook
+            </option>
+            <option
+              value="Twitter"
+            >
+              Twitter
+            </option>
+            <option
+              value="Google"
+            >
+              Google
+            </option>
+            <option
+              value="Space X"
+            >
+              Space X
+            </option>
+          </select>
+        </div>
+        <div
+          className="bg-black text-sm py-3 px-4 flex justify-center items-center rounded-lg shadow-infinity outline-none border-none"
+        >
+          <select
+            className="bg-black text-white w-full after:border-none"
+            onChange={[Function]}
+          >
+            <option
+              disabled={true}
+              selected={true}
+              value=""
+            >
+              Title
+            </option>
+            <option
+              value="Frontend Developer"
+            >
+              Frontend Developer
+            </option>
+            <option
+              value="Backend Developer"
+            >
+              Backend Developer
+            </option>
+            <option
+              value="Product Manager"
+            >
+              Product Manager
+            </option>
+            <option
+              value="Software Developer"
+            >
+              Software Developer
+            </option>
+          </select>
+        </div>
+        <div
+          className="bg-black text-sm py-3 px-4 flex justify-center items-center rounded-lg shadow-infinity outline-none border-none"
+        >
+          <select
+            className="bg-black text-white w-full after:border-none"
+            onChange={[Function]}
+          >
+            <option
+              disabled={true}
+              selected={true}
+              value=""
+            >
+              Skills
+            </option>
+            <option
+              value="React"
+            >
+              React
+            </option>
+            <option
+              value="TypeScript"
+            >
+              TypeScript
+            </option>
+            <option
+              value="Node Js"
+            >
+              Node Js
+            </option>
+            <option
+              value="Express"
+            >
+              Express
+            </option>
+            <option
+              value="Node"
+            >
+              Node
+            </option>
+          </select>
+        </div>
+        <div
+          className="bg-black text-sm py-3 px-4 flex justify-center items-center rounded-lg shadow-infinity outline-none border-none"
+        >
+          <select
+            className="bg-black text-white w-full after:border-none"
+            onChange={[Function]}
+          >
+            <option
+              disabled={true}
+              selected={true}
+              value=""
+            >
+              Job Type
+            </option>
+            <option
+              value="Fully Remote"
+            >
+              Fully Remote
+            </option>
+            <option
+              value="Full time"
+            >
+              Full time
+            </option>
+            <option
+              value="Contract"
+            >
+              Contract
+            </option>
+            <option
+              value="Remote"
+            >
+              Remote
+            </option>
+          </select>
+        </div>
+        <div
+          className="bg-black text-sm py-3 px-4 flex justify-center items-center rounded-lg shadow-infinity outline-none border-none"
+        >
+          <select
+            className="bg-black text-white w-full after:border-none"
+            onChange={[Function]}
+          >
+            <option
+              disabled={true}
+              selected={true}
+              value=""
+            >
+              Location
+            </option>
+            <option
+              value="4, Adeniyan Ogunsanya, okokomaiko"
+            >
+              4, Adeniyan Ogunsanya, okokomaiko
+            </option>
+            <option
+              value="6, Bode Thomas, Close"
+            >
+              6, Bode Thomas, Close
+            </option>
+            <option
+              value="7, Ikorodu close"
+            >
+              7, Ikorodu close
+            </option>
+            <option
+              value="Lagos"
+            >
+              Lagos
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div
+      className="border border-gray-200 my-4"
+    />
+    <section
+      className="mx-8"
+    >
+      <div
+        className="p-8 w-full min-h-[330px] border border-black rounded-3xl flex flex-col mb-8"
+      >
+        <div
+          className="flex text-left w-full"
+        >
+          <h2
+            className="font-medium text-2xl"
+            data-testid="Frontend Developer"
+          >
+            Frontend Developer
+          </h2>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+        >
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Company
+              :
+            </p>
+            <p>
+              Microsoft
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Description
+              :
+            </p>
+            <p>
+              nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Job Type
+              :
+            </p>
+            <p>
+              Fully Remote
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Skills
+              :
+            </p>
+            <p>
+              React
+              TypeScript
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Location
+              :
+            </p>
+            <p>
+              4, Adeniyan Ogunsanya, okokomaiko
+            </p>
+          </div>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="w-full flex md:flex-row flex-col justify-end"
+        >
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-white bg-black"
+            onClick={[Function]}
+          >
+            Apply Now
+          </button>
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-black bg-[#FCF0EC]"
+            onClick={[Function]}
+          >
+            View Job
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      className="mx-8"
+    >
+      <div
+        className="p-8 w-full min-h-[330px] border border-black rounded-3xl flex flex-col mb-8"
+      >
+        <div
+          className="flex text-left w-full"
+        >
+          <h2
+            className="font-medium text-2xl"
+            data-testid="Backend Developer"
+          >
+            Backend Developer
+          </h2>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+        >
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Company
+              :
+            </p>
+            <p>
+              Facebook
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Description
+              :
+            </p>
+            <p>
+              nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Job Type
+              :
+            </p>
+            <p>
+              Full time
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Skills
+              :
+            </p>
+            <p>
+              Node Js
+              Express
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Location
+              :
+            </p>
+            <p>
+              6, Bode Thomas, Close
+            </p>
+          </div>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="w-full flex md:flex-row flex-col justify-end"
+        >
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-white bg-black"
+            onClick={[Function]}
+          >
+            Apply Now
+          </button>
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-black bg-[#FCF0EC]"
+            onClick={[Function]}
+          >
+            View Job
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      className="mx-8"
+    >
+      <div
+        className="p-8 w-full min-h-[330px] border border-black rounded-3xl flex flex-col mb-8"
+      >
+        <div
+          className="flex text-left w-full"
+        >
+          <h2
+            className="font-medium text-2xl"
+            data-testid="Product Manager"
+          >
+            Product Manager
+          </h2>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+        >
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Company
+              :
+            </p>
+            <p>
+              Twitter
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Description
+              :
+            </p>
+            <p>
+              nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Job Type
+              :
+            </p>
+            <p>
+              Contract
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Skills
+              :
+            </p>
+            <p>
+              React
+              TypeScript
+            </p>
+          </div>
+          <div
+            className="flex md:flex-row flex-col"
+          >
+            <p
+              className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+            >
+              Location
+              :
+            </p>
+            <p>
+              7, Ikorodu close
+            </p>
+          </div>
+        </div>
+        <div
+          className="border border-gray-200 my-4"
+        />
+        <div
+          className="w-full flex md:flex-row flex-col justify-end"
+        >
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-white bg-black"
+            onClick={[Function]}
+          >
+            Apply Now
+          </button>
+          <button
+            className="px-6 py-2 mb-3 md:mb-0 mr-2 rounded-3xl hover:scale-110	flex justify-center items-center text-black bg-[#FCF0EC]"
+            onClick={[Function]}
+          >
+            View Job
+          </button>
+        </div>
+      </div>
+    </section>
+    <div
+      className="w-full flex justify-center items-center"
+    >
+      <button
+        className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110"
+        onClick={[Function]}
+      >
+        2
+      </button>
+    </div>
+  </div>
+</section>
+`;

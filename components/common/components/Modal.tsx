@@ -29,8 +29,12 @@ const Modal: React.FC<IProps> = ({ handleClose }: IProps) => {
     });
 
     return (
-        <div className="fixed top-0 h-screen w-screen shadow-infinity flex justify-center items-center p-4 border  bg-modal">
+        <div
+            data-testid="modal-underlay"
+            className="fixed top-0 h-screen w-screen shadow-infinity flex justify-center items-center p-4 border  bg-modal"
+        >
             <div
+                data-testid="main-modal"
                 ref={domNode}
                 className="flex flex-col justify-center items-center min-h-[400px] min-w-[400px] bg-infinity-hero rounded-3xl shadow-infinity"
             >

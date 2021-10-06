@@ -48,7 +48,9 @@ const JobCard: React.FC<IProps> = (job: IProps) => {
             <section className="mx-8">
                 <div className="p-8 w-full min-h-[330px] border border-black rounded-3xl flex flex-col mb-8">
                     <div className="flex text-left w-full">
-                        <h2 className="font-medium text-2xl">{title}</h2>
+                        <h2 className="font-medium text-2xl" data-testid={title}>
+                            {title}
+                        </h2>
                     </div>
                     <div className="border border-gray-200 my-4" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
