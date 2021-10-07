@@ -23,7 +23,6 @@ describe('Home Page', () => {
     it('toggles the navbar icons', () => {
         // const component = render(<Home />);
         const openIcon = getByTestId('open-icon');
-        console.log(openIcon);
         expect(openIcon).toBeInTheDocument();
 
         act(() => {

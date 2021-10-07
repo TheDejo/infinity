@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
     const { setFilter } = useJobContext();
 
     return (
-        <section className="lg:px-8" test-dataId="hero-section">
+        <section className="lg:px-8" test-dataid="hero-section">
             <div className="p-8 bg-infinity-hero lg:rounded-[30px] flex justify-center items-center min-h-[30vh]">
                 <div className="mr-6">
                     <h1 className="xl:w-[30rem] font-semibold text-2xl md:text-3xl lg:text-6xl mb-3">

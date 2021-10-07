@@ -38,11 +38,11 @@ const Slug: React.FC = () => {
         },
         {
             title: 'Job Type',
-            value: singleJob?.type,
+            value: singleJob?.type.join(', '),
         },
         {
             title: 'Skills',
-            value: singleJob?.skills,
+            value: singleJob?.skills.join(', '),
         },
         {
             title: 'Location',
@@ -59,7 +59,7 @@ const Slug: React.FC = () => {
                 <div className="grid grid-cols-1 gap-5 my-12">
                     {JOB_DETAILS.map(({ title, value }, idx) => (
                         <div className="flex md:flex-row flex-col" key={idx.toString()}>
-                            <p className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold">{title}:</p>
+                            <p className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold">{title}:</p>
                             <p>{value}</p>
                         </div>
                     ))}
