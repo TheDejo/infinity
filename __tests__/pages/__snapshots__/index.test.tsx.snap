@@ -159,7 +159,7 @@ exports[`Home Page matches home page snapshot 1`] = `
     >
       <section
         className="lg:px-8"
-        test-dataId="hero-section"
+        test-dataid="hero-section"
       >
         <div
           className="p-8 bg-infinity-hero lg:rounded-[30px] flex justify-center items-center min-h-[30vh]"
