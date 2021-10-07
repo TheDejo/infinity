@@ -329,29 +329,54 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Company
                 </option>
                 <option
-                  value="Microsoft"
+                  value="Vaarst"
                 >
-                  Microsoft
+                  Vaarst
                 </option>
                 <option
-                  value="Facebook"
+                  value="Develop"
                 >
-                  Facebook
+                  Develop
                 </option>
                 <option
-                  value="Twitter"
+                  value="Dotmatics"
                 >
-                  Twitter
+                  Dotmatics
                 </option>
                 <option
-                  value="Google"
+                  value="Clowdr CIC"
                 >
-                  Google
+                  Clowdr CIC
                 </option>
                 <option
-                  value="Space X"
+                  value="Econscia"
                 >
-                  Space X
+                  Econscia
+                </option>
+                <option
+                  value="Gear4Music"
+                >
+                  Gear4Music
+                </option>
+                <option
+                  value="BBC"
+                >
+                  BBC
+                </option>
+                <option
+                  value="Alliants"
+                >
+                  Alliants
+                </option>
+                <option
+                  value="KOBAS"
+                >
+                  KOBAS
+                </option>
+                <option
+                  value="Sainsburys"
+                >
+                  Sainsburys
                 </option>
               </select>
             </div>
@@ -380,9 +405,19 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Backend Developer
                 </option>
                 <option
-                  value="Product Manager"
+                  value="Software Engineer"
                 >
-                  Product Manager
+                  Software Engineer
+                </option>
+                <option
+                  value="Junior Backend Developer"
+                >
+                  Junior Backend Developer
+                </option>
+                <option
+                  value="Production Manager"
+                >
+                  Production Manager
                 </option>
                 <option
                   value="Software Developer"
@@ -406,14 +441,64 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Skills
                 </option>
                 <option
+                  value="TypeScript"
+                >
+                  TypeScript
+                </option>
+                <option
                   value="React"
                 >
                   React
                 </option>
                 <option
-                  value="TypeScript"
+                  value="Three.js"
                 >
-                  TypeScript
+                  Three.js
+                </option>
+                <option
+                  value="Typescript"
+                >
+                  Typescript
+                </option>
+                <option
+                  value="Gatsby"
+                >
+                  Gatsby
+                </option>
+                <option
+                  value="JavaScript"
+                >
+                  JavaScript
+                </option>
+                <option
+                  value="GraphQL"
+                >
+                  GraphQL
+                </option>
+                <option
+                  value="Django"
+                >
+                  Django
+                </option>
+                <option
+                  value="Javascript"
+                >
+                  Javascript
+                </option>
+                <option
+                  value="Management"
+                >
+                  Management
+                </option>
+                <option
+                  value="Unit tests"
+                >
+                  Unit tests
+                </option>
+                <option
+                  value="Git"
+                >
+                  Git
                 </option>
                 <option
                   value="Node Js"
@@ -421,14 +506,19 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Node Js
                 </option>
                 <option
-                  value="Express"
+                  value="AWS"
                 >
-                  Express
+                  AWS
                 </option>
                 <option
-                  value="Node"
+                  value="PHP"
                 >
-                  Node
+                  PHP
+                </option>
+                <option
+                  value="NodeJS"
+                >
+                  NodeJS
                 </option>
               </select>
             </div>
@@ -447,24 +537,24 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Job Type
                 </option>
                 <option
-                  value="Fully Remote"
+                  value="Full Time"
                 >
-                  Fully Remote
-                </option>
-                <option
-                  value="Full time"
-                >
-                  Full time
-                </option>
-                <option
-                  value="Contract"
-                >
-                  Contract
+                  Full Time
                 </option>
                 <option
                   value="Remote"
                 >
                   Remote
+                </option>
+                <option
+                  value="Parmanent"
+                >
+                  Parmanent
+                </option>
+                <option
+                  value="Contract"
+                >
+                  Contract
                 </option>
               </select>
             </div>
@@ -483,28 +573,59 @@ exports[`Home Page matches home page snapshot 1`] = `
                   Location
                 </option>
                 <option
-                  value="4, Adeniyan Ogunsanya, okokomaiko"
+                  value="Bristol BS1"
                 >
-                  4, Adeniyan Ogunsanya, okokomaiko
+                  Bristol BS1
                 </option>
                 <option
-                  value="6, Bode Thomas, Close"
+                  value="Bristol"
                 >
-                  6, Bode Thomas, Close
+                  Bristol
                 </option>
                 <option
-                  value="7, Ikorodu close"
+                  value="Weschester"
                 >
-                  7, Ikorodu close
+                  Weschester
                 </option>
                 <option
-                  value="Lagos"
+                  value="Liverpool"
                 >
-                  Lagos
+                  Liverpool
+                </option>
+                <option
+                  value="London"
+                >
+                  London
+                </option>
+                <option
+                  value="York YO26"
+                >
+                  York YO26
+                </option>
+                <option
+                  value="London W1A"
+                >
+                  London W1A
+                </option>
+                <option
+                  value="Southampton"
+                >
+                  Southampton
+                </option>
+                <option
+                  value="Home Based"
+                >
+                  Home Based
+                </option>
+                <option
+                  value="Edinburgh"
+                >
+                  Edinburgh
                 </option>
               </select>
             </div>
           </div>
+          
         </div>
         <div
           className="border border-gray-200 my-4"
@@ -535,66 +656,65 @@ exports[`Home Page matches home page snapshot 1`] = `
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Company
                   :
                 </p>
                 <p>
-                  Microsoft
+                  Vaarst
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Description
                   :
                 </p>
                 <p>
-                  nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+                  We are looking for a skilled Frontend Developer to be a part our growing web platform team. You will be facing interesting problems that require skill
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Job Type
                   :
                 </p>
                 <p>
-                  Fully Remote
+                  Full Time
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Skills
                   :
                 </p>
                 <p>
-                  React
-                  TypeScript
+                  TypeScript, React, Three.js
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Location
                   :
                 </p>
                 <p>
-                  4, Adeniyan Ogunsanya, okokomaiko
+                  Bristol BS1
                 </p>
               </div>
             </div>
@@ -630,9 +750,9 @@ exports[`Home Page matches home page snapshot 1`] = `
             >
               <h2
                 className="font-medium text-2xl"
-                data-testid="Backend Developer"
+                data-testid="Frontend Developer"
               >
-                Backend Developer
+                Frontend Developer
               </h2>
             </div>
             <div
@@ -645,66 +765,65 @@ exports[`Home Page matches home page snapshot 1`] = `
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Company
                   :
                 </p>
                 <p>
-                  Facebook
+                  Develop
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Description
                   :
                 </p>
                 <p>
-                  nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+                  We are recruiting on behalf of our client who are a global digital agency, who are looking to hire multiple React Developers on a contract basis for v
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Job Type
                   :
                 </p>
                 <p>
-                  Full time
+                  Remote, Parmanent
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Skills
                   :
                 </p>
                 <p>
-                  Node Js
-                  Express
+                  React, Typescript, Gatsby
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Location
                   :
                 </p>
                 <p>
-                  6, Bode Thomas, Close
+                  Bristol
                 </p>
               </div>
             </div>
@@ -740,9 +859,9 @@ exports[`Home Page matches home page snapshot 1`] = `
             >
               <h2
                 className="font-medium text-2xl"
-                data-testid="Product Manager"
+                data-testid="Frontend Developer"
               >
-                Product Manager
+                Frontend Developer
               </h2>
             </div>
             <div
@@ -755,66 +874,65 @@ exports[`Home Page matches home page snapshot 1`] = `
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Company
                   :
                 </p>
                 <p>
-                  Twitter
+                  Dotmatics
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Description
                   :
                 </p>
                 <p>
-                  nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi
+                  Collaborate with product management, application science and support stakeholders to develop and maintain product suite. Deliver high quality clean co
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Job Type
                   :
                 </p>
                 <p>
-                  Contract
+                  Remote
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Skills
                   :
                 </p>
                 <p>
-                  React
-                  TypeScript
+                  JavaScript, React
                 </p>
               </div>
               <div
                 className="flex md:flex-row flex-col"
               >
                 <p
-                  className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold"
+                  className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold"
                 >
                   Location
                   :
                 </p>
                 <p>
-                  7, Ikorodu close
+                  Weschester
                 </p>
               </div>
             </div>
@@ -843,7 +961,7 @@ exports[`Home Page matches home page snapshot 1`] = `
           className="w-full flex justify-center items-center"
         >
           <button
-            className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110"
+            className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110 text-white bg-black"
             onClick={[Function]}
           >
             1
@@ -853,6 +971,18 @@ exports[`Home Page matches home page snapshot 1`] = `
             onClick={[Function]}
           >
             2
+          </button>
+          <button
+            className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110"
+            onClick={[Function]}
+          >
+            3
+          </button>
+          <button
+            className="w-[40px] h-[40px] border border-[#c4c4c4] font-semibold rounded-md mr-2 hover:scale-110"
+            onClick={[Function]}
+          >
+            4
           </button>
         </div>
       </div>

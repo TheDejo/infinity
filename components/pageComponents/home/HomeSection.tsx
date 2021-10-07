@@ -5,6 +5,9 @@ import Hero from './Hero';
 import { useJobContext } from './context/InfinityContext';
 import Button from '@/common/components/Button';
 import Pagination from '@/common/components/Pagination';
+import constants from './constants';
+
+const { SCREEN_TEXTS } = constants;
 
 const HomeSection: React.FC = () => {
     const { data, filter } = useJobContext();
@@ -18,11 +21,11 @@ const HomeSection: React.FC = () => {
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
     const matchWords = (subject: string, words: string[]) => {
-        var regexMetachars = /[(){[*+?.\\^$|]/g;
-        for (var i = 0; i < words.length; i++) {
+        let regexMetachars = /[(){[*+?.\\^$|]/g;
+        for (let i = 0; i < words.length; i++) {
             words[i] = words[i].replace(regexMetachars, '\\$&');
         }
-        var regex = new RegExp('\\b(?:' + words.join('|') + ')\\b', 'gi');
+        let regex = new RegExp('\\b(?:' + words.join('|') + ')\\b', 'gi');
         return subject.match(regex) || [];
     };
 
@@ -37,26 +40,7 @@ const HomeSection: React.FC = () => {
         if (filterArray.length === 0) {
             return (
                 <div className="h-[50vh] w-full px-8 flex flex-col justify-center items-center">
-                    <h1 className="mb-10">Oops, no job for that search</h1>
-                    <Button
-                        title="Return"
-                        onClick={() => location.reload()}
-                        icon={
-                            <svg
-                                className="mr-3"
-                                width="15"
-                                height="15"
-                                viewBox="0 0 15 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M11.875 6.87502H4.4625L6.73125 4.15002C6.83734 4.02238 6.88838 3.85783 6.87314 3.69257C6.8579 3.5273 6.77764 3.37486 6.65 3.26877C6.52237 3.16268 6.35781 3.11164 6.19255 3.12688C6.02728 3.14212 5.87484 3.22238 5.76875 3.35002L2.64375 7.10002C2.62273 7.12985 2.60392 7.16118 2.5875 7.19377C2.5875 7.22502 2.5875 7.24377 2.54375 7.27502C2.51542 7.34668 2.50059 7.42296 2.5 7.50002C2.50059 7.57708 2.51542 7.65336 2.54375 7.72502C2.54375 7.75627 2.54375 7.77502 2.5875 7.80627C2.60392 7.83886 2.62273 7.87019 2.64375 7.90002L5.76875 11.65C5.82751 11.7206 5.9011 11.7773 5.98428 11.8162C6.06746 11.8551 6.15818 11.8752 6.25 11.875C6.39603 11.8753 6.53756 11.8244 6.65 11.7313C6.71329 11.6788 6.7656 11.6144 6.80395 11.5416C6.84229 11.4689 6.86591 11.3894 6.87346 11.3075C6.88101 11.2256 6.87233 11.1431 6.84793 11.0646C6.82353 10.9861 6.78388 10.9132 6.73125 10.85L4.4625 8.12502H11.875C12.0408 8.12502 12.1997 8.05917 12.3169 7.94196C12.4342 7.82475 12.5 7.66578 12.5 7.50002C12.5 7.33426 12.4342 7.17529 12.3169 7.05808C12.1997 6.94087 12.0408 6.87502 11.875 6.87502Z"
-                                    fill="white"
-                                />
-                            </svg>
-                        }
-                    />
+                    <h1 className="mb-7 font-medium text-xl">{SCREEN_TEXTS.noSearchResult}</h1>
                 </div>
             );
         }
@@ -66,8 +50,6 @@ const HomeSection: React.FC = () => {
         const getIndex = (element: string) => element === value;
         return self.findIndex(getIndex) === index;
     };
-
-    // (value: string, index: number, obj: string[]) => unknown
 
     const SELECT_FILTER = [
         {
@@ -120,6 +102,30 @@ const HomeSection: React.FC = () => {
                             <Select key={idx.toString()} title={title} data={options} />
                         ))}
                     </div>
+                    {filter && (
+                        <div className="w-full flex justify-center">
+                            <Button
+                                title="Clear Filter"
+                                onClick={() => location.reload()}
+                                background="bg-[#EE6A6A]"
+                                icon={
+                                    <svg
+                                        className="mr-3"
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 20 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M10 1.25C5.16797 1.25 1.25 5.16797 1.25 10C1.25 14.832 5.16797 18.75 10 18.75C14.832 18.75 18.75 14.832 18.75 10C18.75 5.16797 14.832 1.25 10 1.25ZM13.2305 13.3242L11.9414 13.3184L10 11.0039L8.06055 13.3164L6.76953 13.3223C6.68359 13.3223 6.61328 13.2539 6.61328 13.166C6.61328 13.1289 6.62695 13.0938 6.65039 13.0645L9.19141 10.0371L6.65039 7.01172C6.62679 6.98309 6.61369 6.94725 6.61328 6.91016C6.61328 6.82422 6.68359 6.75391 6.76953 6.75391L8.06055 6.75977L10 9.07422L11.9395 6.76172L13.2285 6.75586C13.3145 6.75586 13.3848 6.82422 13.3848 6.91211C13.3848 6.94922 13.3711 6.98438 13.3477 7.01367L10.8105 10.0391L13.3496 13.0664C13.373 13.0957 13.3867 13.1309 13.3867 13.168C13.3867 13.2539 13.3164 13.3242 13.2305 13.3242Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                }
+                            />
+                        </div>
+                    )}
                 </div>
                 <div className="border border-gray-200 my-4" />
                 {renderJobs()}

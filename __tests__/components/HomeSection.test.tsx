@@ -2,7 +2,6 @@ import React from 'react';
 import { render, Matcher, MatcherOptions, screen, act, fireEvent } from '@testing-library/react';
 import HomeSection from '@/pageComponents/home/HomeSection';
 import renderer from 'react-test-renderer';
-import data from '@data';
 
 const mockedPush = jest.fn();
 
@@ -52,9 +51,9 @@ describe('Home Section  Component', () => {
         const searchJob = getByTestId('hero-input') as HTMLInputElement;
 
         act(() => {
-            fireEvent.change(searchJob, { target: { value: 'frontend Developer' } });
+            fireEvent.change(searchJob, { target: { value: 'frontend developer' } });
         });
-        expect(searchJob.value).toBe('frontend Developer');
+        expect(searchJob.value).toBe('frontend developer');
 
         const searchButton = screen.getByText('Find Jobs');
 
@@ -62,7 +61,7 @@ describe('Home Section  Component', () => {
             fireEvent.click(searchButton);
         });
 
-        expect(screen.getByTestId('Frontend Developer')).toBeInTheDocument();
+        expect(screen.getAllByTestId('Frontend Developer')[0]).toBeInTheDocument();
     });
 
     it('pushes user to dynamic path when clicked', () => {

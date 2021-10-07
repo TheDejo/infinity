@@ -12,6 +12,7 @@ const SCREEN_TEXTS = {
     contactAddress: 'nulla pellentesque dignissim enim sit amet venenatis urna',
     phoneNumber:'+2340000000000',
     infinityTitle: 'Infinity & Beyond',
+    noSearchResult: 'Oops, no job for this search'
 };
 
 export default {

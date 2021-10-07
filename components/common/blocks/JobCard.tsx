@@ -27,15 +27,15 @@ const JobCard: React.FC<IProps> = (job: IProps) => {
         },
         {
             title: 'Description',
-            value: description,
+            value: description.slice(0, 150),
         },
         {
             title: 'Job Type',
-            value: type,
+            value: type.join(', '),
         },
         {
             title: 'Skills',
-            value: skills,
+            value: skills.join(', '),
         },
         {
             title: 'Location',
@@ -56,7 +56,7 @@ const JobCard: React.FC<IProps> = (job: IProps) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {JOB_DETAILS.map(({ title, value }, idx) => (
                             <div className="flex md:flex-row flex-col" key={idx.toString()}>
-                                <p className="md:mr-3 mb-3 md:mb-0 w-32 text-darkBlue font-semibold">{title}:</p>
+                                <p className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold">{title}:</p>
                                 <p>{value}</p>
                             </div>
                         ))}
