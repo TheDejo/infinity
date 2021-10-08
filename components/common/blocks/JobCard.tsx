@@ -27,7 +27,7 @@ const JobCard: React.FC<IProps> = (job: IProps) => {
         },
         {
             title: 'Description',
-            value: description.slice(0, 150),
+            value: description,
         },
         {
             title: 'Job Type',
@@ -57,7 +57,7 @@ const JobCard: React.FC<IProps> = (job: IProps) => {
                         {JOB_DETAILS.map(({ title, value }, idx) => (
                             <div className="flex md:flex-row flex-col" key={idx.toString()}>
                                 <p className="md:mr-3 mb-3 md:mb-0 w-24 text-darkBlue font-semibold">{title}:</p>
-                                <p>{value}</p>
+                                <p className="line-clamp">{value}</p>
                             </div>
                         ))}
                     </div>
