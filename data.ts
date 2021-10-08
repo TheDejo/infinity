@@ -91,7 +91,6 @@ const JOBS_DATA = [
     },
 ]
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     JOBS_DATA,
 }
