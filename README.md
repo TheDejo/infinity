@@ -1,12 +1,15 @@
 # Taikai Interplanetary Job Board
 
 #### Stack Used
+
+```bash
 - Next Js
 - Typescript
 - Tailwind CSS
 - Jest
 - React Testing Library
 - Netlify
+```
 
 ### Desktop View
 ![Job board Landing Page](https://user-images.githubusercontent.com/65681287/136618846-97eb61fa-0729-47a9-9c87-8a2301929fcb.png)
